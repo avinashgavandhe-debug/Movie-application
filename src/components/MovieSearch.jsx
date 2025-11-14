@@ -10,9 +10,13 @@ const MovieSearch = () => {
   const searchRef = useRef(null);
   const navigate = useNavigate();
 
-  const API_KEY = 'ee3db977b437a93da1f4178398df3952';
-  const BASE_URL = 'https://api.themoviedb.org/3';
-  const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+  // const API_KEY = 'ee3db977b437a93da1f4178398df3952';
+  // const BASE_URL = 'https://api.themoviedb.org/3';
+  // const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+
+  const API_KEY = import.meta.env.VITE_API_KEY
+  const BASE_URL = import.meta.env.VITE_BASE_URL
+  const IMG_BASE_URL = import.meta.env.VITE_IMG_BASE_URL;
 
   // Debounce effect for search
   useEffect(() => {

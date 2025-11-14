@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Search, Star, Calendar, Film, ArrowLeft } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import {  Star, Calendar, ArrowLeft } from "lucide-react";
 import ImageComponent from "./common/ImageComponent";
 import ButtonComponent from "./common/ButtonComponent";
 

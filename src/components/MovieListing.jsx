@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import Pagination from "./Pagination";
@@ -13,8 +13,11 @@ const MovieListing = () => {
   const location = useLocation();
   const { category } = useParams(); 
 
-  const API_KEY = "ee3db977b437a93da1f4178398df3952";
-  const BASE_URL = "https://api.themoviedb.org/3";
+  // const API_KEY = "ee3db977b437a93da1f4178398df3952";
+  // const BASE_URL = "https://api.themoviedb.org/3";
+
+  const API_KEY = import.meta.env.VITE_API_KEY
+  const BASE_URL = import.meta.env.VITE_BASE_URL
 
   const getCategory = () => {
     if (category) return category;
@@ -33,14 +36,13 @@ const MovieListing = () => {
   }, [currentPage, movieCategory]);
 
   const fetchMovies = async (category, page) => {
-    setLoading(true);
+    setLoading(true);  
     try {
       const response = await fetch(
         `${BASE_URL}/movie/${category}?api_key=${API_KEY}&language=en-US&page=${page}`
       );
       const data = await response.json();
       setMovies(data.results || []);
-      console.log(data.results);
       
       setTotalPages(data.total_pages > 500 ? 500 : data.total_pages); 
     } catch (error) {
