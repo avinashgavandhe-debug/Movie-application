@@ -1,5 +1,3 @@
-import React from "react";
-
 const ImageComponent = ({movie, className = ""}) => {
   return (
     <img

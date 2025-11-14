@@ -9,8 +9,6 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const IMG_BASE_URL = "https://image.tmdb.org/t/p/w500";
-
   const fetchMovieDetails = async () => {
     try {
       setLoading(true);
@@ -42,16 +40,6 @@ const MovieDetails = () => {
     <>
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
-          {/* <button>
-          <Link
-            to="/"
-            className="mb-6 px-4 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition inline-flex items-center gap-2"
-          >
-            <ArrowLeft size={20} />
-            Back to Movies
-          </Link>
-            </button> */}
-
           <ButtonComponent
             to="/"
             text="Back to Movies"

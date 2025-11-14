@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const ButtonComponent = ({ 
@@ -9,7 +8,7 @@ const ButtonComponent = ({
   className = "", 
   onClick 
 }) => {
-  const baseClasses = "px-4 py-2 bg-red-600 rounded-lg text-white hover:bg-red-700 transition inline-flex items-center gap-2";
+  const baseClasses = "px-4 py-2 bg-red-600 rounded-lg text-black-500 hover:bg-red-700 transition inline-flex items-center gap-2";
   const combinedClasses = `${baseClasses} ${className}`;
 
   // If it's an internal navigation link
@@ -37,8 +36,6 @@ const ButtonComponent = ({
       </a>
     );
   }
-
-  // If it's a regular button
   return (
     <button className={combinedClasses} onClick={onClick}>
       {Icon && <Icon size={20} />}

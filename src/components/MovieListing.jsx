@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import MovieCard from "./MovieCard";
-import MovieSearch from "./MovieSearch";
 import Pagination from "./Pagination";
 import Navbar from "./common/Navbar";
 
@@ -70,7 +69,6 @@ const MovieListing = () => {
           <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center tracking-tight">
             {getPageTitle()}
           </h1>
-          {/* <MovieSearch /> */}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {movies.length > 0 ? (

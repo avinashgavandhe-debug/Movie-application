@@ -1,6 +1,8 @@
-import React from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ButtonComponent from './common/ButtonComponent';
+
+
+
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const getPageNumbers = () => {
     const pages = [];
@@ -59,7 +61,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               page === currentPage
                 ? 'bg-red-600 font-bold'
                 : page === '...'
-                ? 'bg-transparent text-gray-400 cursor-default pointer-events-none'
+                ? 'bg-transparent text-black-800 cursor-default pointer-events-none'
                 : 'bg-gray-800 hover:bg-gray-700'
             }`}
           />
